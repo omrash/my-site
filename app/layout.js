@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Hello World',
-  description: 'Simple test page'
+  title: 'Software Engineer',
+  description: 'Personal portfolio of a software engineer'
 }
 
 export default function RootLayout({ children }) {
