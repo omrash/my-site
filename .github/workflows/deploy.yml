@@ -20,8 +20,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: my-site:latest
+          tags: ghcr.io/${{ github.repository }}:latest
           platforms: linux/amd64
+          registry: ghcr.io
 
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
