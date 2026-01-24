@@ -11,7 +11,7 @@ services:
 
   # Auto-update service - monitors GitHub Container Registry
   watchtower:
-    image: containrrr/watchtower:latest
+    image: nicholas-fedor/watchtower:latest
     environment:
       - WATCHtower_poll_interval=30m
       - WATCHtower_labels=enabled=true
