@@ -7,147 +7,17 @@
 body {
   font-family: system-ui, -apple-system, sans-serif;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
-}
-
-.home-container {
-  min-height: 100vh;
-  background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.text-center {
   text-align: center;
-}
-
-.avatar {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 9999px;
-  background: linear-gradient(to right, #a855f7, #ec4899);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
 }
 
 .title {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  font-size: 1.25rem;
-  color: #d8b4fa;
-  margin-bottom: 0.5rem;
-}
-
-.bio {
-  font-size: 1.125rem;
-  color: #d3d3d3;
-  max-width: 42rem;
-  margin-bottom: 3rem;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 3rem;
-}
-
-.skill-tag {
-  padding: 0.5rem 1rem;
-  background-color: #9333ea;
-  color: white;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-}
-
-.section-title {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 1.5rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  max-width: 56rem;
-}
-
-.project-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  text-align: left;
-  transition: all;
-}
-
-.project-card:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.project-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 0.5rem;
-}
-
-.project-description {
-  color: #d3d3d3;
-  margin-bottom: 1rem;
-}
-
-.project-link {
-  color: #d8b4fa;
-}
-
-.project-link:hover {
-  color: #e9d5eb;
 }

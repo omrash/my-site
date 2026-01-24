@@ -1,8 +1,6 @@
-import './globals.css'
-
 export const metadata = {
-  title: 'Software Engineer Portfolio',
-  description: 'Personal website showcasing projects and skills'
+  title: 'Hello World',
+  description: 'Simple test page'
 }
 
 export default function RootLayout({ children }) {
