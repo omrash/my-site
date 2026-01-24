@@ -10,6 +10,10 @@ body {
   background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
 }
 
+.bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;

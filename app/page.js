@@ -21,11 +21,11 @@ export default function Home() {
   ])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br">
       <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col items-center justify-center text-center">
           <div className="mb-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-4xl font-bold">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-r flex items-center justify-center text-white text-4xl font-bold">
               {name.charAt(0)}
             </div>
           </div>
