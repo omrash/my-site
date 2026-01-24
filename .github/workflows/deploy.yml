@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/omrash/my-site:latest
+          tags: ghcr.io/${{ github.repository_owner }}/my-site:latest
           platforms: linux/amd64
 
       - name: Deploy to VPS
