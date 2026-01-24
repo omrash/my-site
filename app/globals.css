@@ -1,17 +1,18 @@
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed9;
-  --primary-light: #60a5fa;
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-300: #d1d5db;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
+  --nord-0: #2E3442;
+  --nord-1: #3B4265;
+  --nord-2: #4B5563;
+  --nord-3: #6C7077;
+  --nord-4: #9D9E8B;
+  --nord-5: #D8EEFF;
+  --nord-6: #9C72AC;
+  --nord-7: #9A8FD8;
+  --nord-8: #BB9A87;
+  --nord-9: #E9894C;
+  --nord-10: #FF9C65;
+  --nord-11: #E0C9C7;
+  --nord-12: #B8FCEC;
+  --nord-13: #F2F0F9;
 }
 
 * {
@@ -23,8 +24,8 @@
 body {
   font-family: system-ui, -apple-system, sans-serif;
   min-height: 100vh;
-  background: var(--gray-50);
-  color: var(--gray-700);
+  background: var(--nord-0);
+  color: var(--nord-5);
 }
 
 .container {
@@ -36,14 +37,14 @@ body {
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--gray-800);
+  color: var(--nord-5);
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--gray-500);
+  color: var(--nord-4);
   margin-bottom: 2rem;
 }
 
@@ -54,12 +55,12 @@ body {
 .section-title {
   font-size: 1.75rem;
   font-weight: 600;
-  color: var(--gray-800);
+  color: var(--nord-5);
   margin-bottom: 1.5rem;
 }
 
 .card {
-  background: #ffffff;
+  background: var(--nord-1);
   border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -68,8 +69,8 @@ body {
 
 .button {
   display: inline-block;
-  background: var(--primary);
-  color: #ffffff;
+  background: var(--nord-6);
+  color: var(--nord-1);
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   text-decoration: none;
@@ -78,7 +79,7 @@ body {
 }
 
 .button:hover {
-  background: var(--primary-dark);
+  background: var(--nord-7);
 }
 
 .skills-grid {
@@ -88,7 +89,7 @@ body {
 }
 
 .skill-item {
-  background: var(--gray-100);
+  background: var(--nord-2);
   padding: 0.75rem 1rem;
   border-radius: 0.375rem;
   font-weight: 500;
@@ -96,7 +97,7 @@ body {
 }
 
 .project-card {
-  background: #ffffff;
+  background: var(--nord-1);
   border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -104,20 +105,20 @@ body {
 
 .project-title {
   font-weight: 600;
-  color: var(--gray-800);
+  color: var(--nord-5);
   margin-bottom: 0.25rem;
 }
 
 .project-description {
-  color: var(--gray-500);
+  color: var(--nord-4);
   font-size: 0.875rem;
 }
 
 .contact-link {
   display: block;
   padding: 0.75rem 1.5rem;
-  background: var(--gray-100);
-  color: var(--gray-700);
+  background: var(--nord-2);
+  color: var(--nord-5);
   text-decoration: none;
   border-radius: 0.375rem;
   font-weight: 500;
@@ -125,7 +126,7 @@ body {
 }
 
 .contact-link:hover {
-  background: var(--gray-200);
+  background: var(--nord-3);
 }
 
 @media (max-width: 768px) {
