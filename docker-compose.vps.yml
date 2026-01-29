@@ -1,6 +1,6 @@
 services:
   watchtower:
-    image: nicholas-fedor/watchtower:latest
+    image: ghcr.io/nicholas-fedor/watchtower:latest
     environment:
       - WATCHtower_poll_interval=30m
       - WATCHtower_labels=enabled=true
@@ -15,3 +15,5 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    labels:
+      - enabled=true

@@ -8,10 +8,12 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    labels:
+      - enabled=true
 
   # Auto-update service - monitors GitHub Container Registry
   watchtower:
-    image: nicholas-fedor/watchtower:latest
+    image: ghcr.io/nicholas-fedor/watchtower:latest
     environment:
       - WATCHtower_poll_interval=30m
       - WATCHtower_labels=enabled=true
