@@ -1,18 +1,20 @@
 :root {
-  --nord-0: #2E3442;
-  --nord-1: #3B4265;
-  --nord-2: #4B5563;
-  --nord-3: #6C7077;
-  --nord-4: #9D9E8B;
-  --nord-5: #D8EEFF;
-  --nord-6: #9C72AC;
-  --nord-7: #9A8FD8;
-  --nord-8: #BB9A87;
-  --nord-9: #E9894C;
-  --nord-10: #FF9C65;
-  --nord-11: #E0C9C7;
-  --nord-12: #B8FCEC;
-  --nord-13: #F2F0F9;
+  --nord-0: #2E3440;
+  --nord-1: #3B4252;
+  --nord-2: #434C5E;
+  --nord-3: #4C566A;
+  --nord-4: #D8DEE9;
+  --nord-5: #E5E9F0;
+  --nord-6: #ECEFF4;
+  --nord-7: #8FBCBB;
+  --nord-8: #88C9D8;
+  --nord-9: #81A1C1;
+  --nord-10: #5E81AC;
+  --nord-11: #BF616A;
+  --nord-12: #D08770;
+  --nord-13: #EBCB8B;
+  --nord-14: #A3BE8C;
+  --nord-15: #B48EAD;
 }
 
 * {
@@ -22,10 +24,46 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1;
   min-height: 100vh;
   background: var(--nord-0);
   color: var(--nord-5);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+/* Glassmorphism utility classes */
+.glass {
+  background: rgba(46, 52, 66, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(136, 201, 216, 0.1);
+  border-radius: 0.5rem;
+}
+
+.glass-light {
+  background: rgba(59, 66, 101, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(136, 201, 216, 0.15);
+  border-radius: 0.5rem;
+}
+
+.glass-strong {
+  background: rgba(46, 52, 66, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(136, 201, 216, 0.2);
+  border-radius: 0.5rem;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #88C9D8, #FFCA3F, #938CFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .container {
@@ -35,17 +73,20 @@ body {
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
   color: var(--nord-5);
   margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
   font-weight: 500;
   color: var(--nord-4);
   margin-bottom: 2rem;
+  line-height: 1.5;
 }
 
 .section {
@@ -53,14 +94,18 @@ body {
 }
 
 .section-title {
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
   color: var(--nord-5);
   margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
 .card {
-  background: var(--nord-1);
+  background: rgba(59, 66, 101, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(136, 201, 216, 0.15);
   border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -89,7 +134,10 @@ body {
 }
 
 .skill-item {
-  background: var(--nord-2);
+  background: rgba(75, 85, 99, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(136, 201, 216, 0.1);
   padding: 0.75rem 1rem;
   border-radius: 0.375rem;
   font-weight: 500;
@@ -97,7 +145,10 @@ body {
 }
 
 .project-card {
-  background: var(--nord-1);
+  background: rgba(59, 66, 101, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(136, 201, 216, 0.15);
   border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -117,12 +168,15 @@ body {
 .contact-link {
   display: block;
   padding: 0.75rem 1.5rem;
-  background: var(--nord-2);
+  background: rgba(75, 85, 99, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(136, 201, 216, 0.1);
   color: var(--nord-5);
   text-decoration: none;
   border-radius: 0.375rem;
   font-weight: 500;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 .contact-link:hover {

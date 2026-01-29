@@ -35,13 +35,4 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Update deployment badge
-        uses: actions/checkout@v3
-        with:
-          ref: 'main'
-          persist-credentials: false
-      - name: Commit and push badge
-        run: |
-          echo "✅ New Docker image pushed to GitHub Container Registry"
-          echo "🔄 Watchtower on VPS will auto-pull and deploy"
-        shell: bash
+
