@@ -6,3 +6,11 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+
+  watchtower:
+    image: ghcr.io/nicholas-fedor/watchtower:latest
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=1800
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
