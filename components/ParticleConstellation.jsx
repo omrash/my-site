@@ -2,15 +2,15 @@
 
 import { useEffect, useRef, useCallback } from 'react';
 
-// Nord color palette for particles
-const nordColors = [
+// Cool color palette for particles (blues, cyans, teals, purples)
+const coolColors = [
   '#88C9D8', // Cyan
-  '#FFCA3F', // Yellow
   '#938CFF', // Purple
-  '#D8DEE9', // White
+  '#D8DEE9', // White/ice
   '#81A1C1', // Light blue
-  '#B48EAD', // Pink
-  '#A3BE8C', // Green
+  '#5E81AC', // Blue
+  '#8FBCBB', // Teal
+  '#88C0D0', // Cyan variant
 ];
 
 class Particle {
@@ -20,7 +20,7 @@ class Particle {
     this.vx = (Math.random() - 0.5) * 0.5; // Medium speed
     this.vy = (Math.random() - 0.5) * 0.5;
     this.radius = Math.random() * 2 + 1.5; // 1.5-3.5px
-    this.color = nordColors[Math.floor(Math.random() * nordColors.length)];
+    this.color = coolColors[Math.floor(Math.random() * coolColors.length)];
     this.glowIntensity = Math.random() * 0.5 + 0.5;
     this.pulsePhase = Math.random() * Math.PI * 2;
     
