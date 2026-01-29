@@ -35,4 +35,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-
+      - name: Trigger Watchtower Update
+        run: |
+          curl -H "Authorization: Bearer ${{ secrets.WATCHTOWER_TOKEN }}" \
+               http://${{ secrets.VPS_HOST }}:8080/v1/update
+        continue-on-error: true
