@@ -30,7 +30,25 @@
       background-image: radial-gradient(var(--rule) 1px, transparent 1px);
       background-size: 24px 24px;
     }
-    main { width: 100%; max-width: 560px; }
+    main {
+      width: 100%; max-width: 960px;
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+      gap: 48px; align-items: center;
+    }
+    #dog { display: block; width: 100%; }
+    #dog img {
+      display: block; width: 100%; height: auto;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      /* While the animation downloads: show the small first frame instead of
+         an empty box, and keep the alt text for screen readers but not on screen. */
+      background: url(dog-still.webp) center / 100% 100% no-repeat;
+      color: transparent;
+    }
+    @media (max-width: 760px) {
+      main { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+      #dog { max-width: 420px; justify-self: center; order: -1; }
+    }
     .prompt { color: var(--muted); }
     h1 { font-size: 15px; font-weight: 600; letter-spacing: 0.02em; }
     p { color: var(--muted); }
@@ -51,16 +69,22 @@
 </head>
 <body>
   <main>
-    <p class="prompt">&gt; whoami</p>
-    <h1>Omar Rashwan</h1>
-    <p>Software engineer — low-level systems &amp; graphics.</p>
-    <hr>
-    <p class="prompt">&gt; status</p>
-    <p>Rebuilding from scratch. <span class="cursor" aria-hidden="true"></span></p>
-    <hr>
-    <nav>
-      <a href="https://github.com/omrash">github</a>
-    </nav>
+    <section>
+      <p class="prompt">&gt; whoami</p>
+      <h1>Omar Rashwan</h1>
+      <p>Software engineer — low-level systems &amp; graphics.</p>
+      <hr>
+      <p class="prompt">&gt; status</p>
+      <p>Rebuilding from scratch. <span class="cursor" aria-hidden="true"></span></p>
+      <hr>
+      <nav>
+        <a href="https://github.com/omrash">github</a>
+      </nav>
+    </section>
+    <picture id="dog">
+      <source srcset="dog-still.webp" media="(prefers-reduced-motion: reduce)">
+      <img src="dog.webp" width="420" height="414" alt="My dog on a mountain summit, painted and dithered">
+    </picture>
   </main>
 </body>
 </html>
