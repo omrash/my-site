@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Omar Rashwan</title>
   <meta name="description" content="Omar Rashwan — software engineer, low-level systems and graphics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0e0e0e;
       --fg: #d4d4d0;
       --muted: #6b6b66;
       --rule: #262624;
-      --accent: #ff5a1f;
+      --accent: #e5383b;
     }
     @media (prefers-color-scheme: light) {
       :root { --bg: #f2f1ed; --fg: #1c1c1a; --muted: #85847e; --rule: #dcdbd5; }
@@ -23,7 +26,7 @@
       display: grid;
       place-items: center;
       padding: 24px 16px;
-      font: 15px/1.6 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+      font: 15px/1.6 "IBM Plex Mono", ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
       background-image: radial-gradient(var(--rule) 1px, transparent 1px);
       background-size: 24px 24px;
     }
@@ -48,11 +51,11 @@
 </head>
 <body>
   <main>
-    <p class="prompt">$ whoami</p>
+    <p class="prompt">&gt; whoami</p>
     <h1>Omar Rashwan</h1>
     <p>Software engineer — low-level systems &amp; graphics.</p>
     <hr>
-    <p class="prompt">$ status</p>
+    <p class="prompt">&gt; status</p>
     <p>Rebuilding from scratch. <span class="cursor" aria-hidden="true"></span></p>
     <hr>
     <nav>
