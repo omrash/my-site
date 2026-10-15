@@ -1,0 +1,20 @@
+services:
+  app:
+    image: ghcr.io/omrash/my-site:latest
+    ports:
+      - "80:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
+  watchtower:
+    image: ghcr.io/nicholas-fedor/watchtower:latest
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=1800
+      - WATCHTOWER_HTTP_API_UPDATE=true
+      - WATCHTOWER_HTTP_API_TOKEN=${WATCHTOWER_TOKEN}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
