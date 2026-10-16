@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  # Sent by the private resume repo when the resume changes.
+  repository_dispatch:
+    types: [resume-updated]
+  workflow_dispatch:
 
 jobs:
   build-and-push:
@@ -14,6 +18,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Check out the resume source (private)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/resume
+          ssh-key: ${{ secrets.RESUME_DEPLOY_KEY }}
+          path: resume-data
+
+      - name: Build the resume page and PDF
+        run: python3 resume-data/build.py --site site --html site/resume.html --pdf site/resume.pdf
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
