@@ -52,7 +52,7 @@ a:hover { border-color: var(--accent); }
 .type {
   display: inline-block; vertical-align: bottom; overflow: hidden; white-space: nowrap;
   width: calc(var(--n) * 1ch);
-  animation: type calc(var(--n) * 55ms) steps(var(--n)) var(--t) both;
+  animation: type calc(var(--n) * 55ms) steps(var(--n)) var(--t) backwards;
 }
 @keyframes type { from { width: 0; } }
 .prompt[style*="--t"]::after {
