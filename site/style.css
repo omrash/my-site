@@ -67,6 +67,17 @@ a:hover { border-color: var(--accent); }
 .fade { animation: fade 0.8s ease var(--d) both; }
 @keyframes fade { from { opacity: 0; } }
 
+/* A prompt shows its directory (--w characters) until its command's
+   output appears (--o, or --e when they coincide), then drops it, like a
+   transient prompt. Gone is the finished state. */
+.cwd {
+  display: inline-block; vertical-align: bottom; overflow: hidden; white-space: pre;
+  width: 0;
+  animation: cwd var(--o, var(--e)) backwards;
+}
+.cwd { color: var(--accent); }
+@keyframes cwd { from, to { width: calc(var(--w) * 1ch); } }
+
 @media (prefers-reduced-motion: reduce) {
-  .cursor, .type, .out, .fade, .prompt::after { animation: none; }
+  .cursor, .type, .out, .fade, .cwd, .prompt::after { animation: none; }
 }

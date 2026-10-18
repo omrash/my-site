@@ -29,6 +29,11 @@ jobs:
       - name: Build the resume page and PDF
         run: python3 resume-data/build.py --site site --html site/resume.html --pdf site/resume.pdf
 
+      # Cloudflare and browsers cache style.css for hours; a new link each deploy
+      # means new pages never pair with an old stylesheet.
+      - name: Version the stylesheet link
+        run: sed -i 's|href="style.css"|href="style.css?v=${{ github.run_number }}"|' site/*.html
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
