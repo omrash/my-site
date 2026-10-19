@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not found · Omar Rashwan</title>
+  <!-- Served at whatever path was missing, so resolve links from the root. -->
+  <base href="/">
+  <link rel="icon" href="favicon-64x64.png" type="image/png" sizes="64x64">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 24px 16px;
+    }
+    main { width: 100%; max-width: 640px; }
+    .path { color: var(--fg); overflow-wrap: anywhere; }
+    .err { color: var(--muted); overflow-wrap: anywhere; }
+    .err + .prompt { margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- nginx fills in the requested path relative to ~ (server-side include,
+         HTML-escaped). -->
+    <p class="prompt">&gt; cd <span class="path"><!--# echo var="rel_path" default="" --></span></p>
+    <p class="err">cd: no such file or directory: <!--# echo var="rel_path" default="" --></p>
+    <p class="prompt">&gt; <a href="./">cd ~</a> <span class="cursor" aria-hidden="true"></span></p>
+  </main>
+</body>
+</html>
