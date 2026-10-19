@@ -1,0 +1,20 @@
+(origin_cert) {
+	tls /certs/origin.pem /certs/origin.key
+}
+
+omarrashwan.com {
+	import origin_cert
+
+	handle /v1/update {
+		reverse_proxy watchtower:8080
+	}
+
+	handle {
+		reverse_proxy app:3000
+	}
+}
+
+www.omarrashwan.com {
+	import origin_cert
+	redir https://omarrashwan.com{uri} permanent
+}

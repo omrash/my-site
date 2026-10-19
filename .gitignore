@@ -1,9 +1,10 @@
+certs/
 node_modules/
+.DS_Store
 .env*
 !.env.example
-.DS_Store
 
 # Built by build.py in the private resume repo
+site/.resume-print-*
 site/resume.html
 site/resume.pdf
-site/.resume-print-*
